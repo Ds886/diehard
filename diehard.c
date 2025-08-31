@@ -65,8 +65,9 @@ void do_test(char *fn)
       case 4: binrnk(fn,"6x8"); break;   
       case 5: bitst(fn); break;
       case 6: monky(fn, "OPSO"); monky(fn, "OQSO"); monky(fn, "DNA"); break;
-      case 7: cnt1s(fn, "stream"); break;
-      case 8: cnt1s(fn, "specific"); break;   
+      //  Ds886: doesnt exist in the source code
+      // case 7: cnt1s(fn, "stream"); break;
+      // case 8: cnt1s(fn, "specific"); break;   
       case 9: park(fn); break;
       case 10: mindist(fn); break; 
       case 11: sphere(fn); break;
@@ -117,7 +118,10 @@ void diehard()
 
   ungetc(c, stdin);
 
-  gets(fn);
+  if (fgets(fn, sizeof fn, stdin)) {
+      fn[strcspn(fn, "\n")] = '\0';
+  }
+  
 
   puts("\n\t\tHERE ARE YOUR CHOICES:\n");
   puts("\t\t1   Birthday Spacings");
@@ -149,9 +153,9 @@ void diehard()
 }
 
 
-main()
+int main(void)
 {
   diehard();
 
-   return;
+   return 0;
 }

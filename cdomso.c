@@ -151,7 +151,7 @@ real monky_stat(char *filename, char *test, int no_tests)
   printf("\t------------------------------");
   printf("-----------------------------------\n");
   
-  return;
+  return 0;
 }
 
 /* type "OPSO" for OPSO test and so on */
