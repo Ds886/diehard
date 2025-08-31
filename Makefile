@@ -8,11 +8,7 @@ OBJS = diehard.o d3sphere.o kstest.o squeez.o cdbday.o cdosum.o df.o \
        mindist.o cdbinrnk.o cdpark.o cdoperm5.o cdbitst.o cnt1s.o \
        funct.o cdomso.o craptest.o runtest.o
 
-.PHONY: clean
-
-clean:
-	rm -vf *.o
-
+ALL = diehard
 diehard: $(OBJS)
 	$(CC) -lm -o diehard $(OBJS)
 
@@ -66,3 +62,8 @@ craptest.o: craptest.c header.h macro.h
 	
 runtest.o: runtest.c header.h macro.h
 	$(CC) -c runtest.c
+
+.PHONY: clean
+
+clean:
+	rm -vf *.o diehard
