@@ -8,6 +8,11 @@ OBJS = diehard.o d3sphere.o kstest.o squeez.o cdbday.o cdosum.o df.o \
        mindist.o cdbinrnk.o cdpark.o cdoperm5.o cdbitst.o cnt1s.o \
        funct.o cdomso.o craptest.o runtest.o
 
+.PHONY: clean
+
+clean:
+	rm -vf *.o
+
 diehard: $(OBJS)
 	$(CC) -lm -o diehard $(OBJS)
 
