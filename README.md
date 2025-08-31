@@ -1,6 +1,7 @@
 # diehard
 This is a fixed source of diehard by George Marsaglia<geo@stat.fsu.edu>
 light fixes introduced with gcc14
+Orignal source code can be found in branch 20160828
 
 # Usage
 
@@ -10,6 +11,7 @@ light fixes introduced with gcc14
 
 # Sources
 Last archive of original source - http://web.archive.org/web/20160828111350if_/http://stat.fsu.edu/pub/diehard/die-c.tar.gz
+
 
 
 
